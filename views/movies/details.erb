@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Details</title>
+</head>
+<body>
+  <h1><%= @title %></h1>
+  <p>
+    <% if @genre %>
+      <%= "#{@genre}" %>
+    <% end %>
+    <% if @year %>
+      <%= "/ #{@year}" %>
+    <% end %>
+    <% if @studio %>
+      <%= "/ #{@studio}" %>
+    <% end %>
+  </p>
+  <p>
+    <% if @synopsis %>
+      <%= @synopsis %>
+    <% end %>
+  </p>
+  <h2>Actors:</h2>
+  <ul>
+    <% @movie_details.each do |info| %>
+      <li> <a href= "/actors/<%= info['actor_id'] %>"><%= info["actor"] %> as <%= info["character"] %></a> </li>
+    <% end %>
+  </ul>
+
+  <!-- <%# @movie_details.each do |movie| %>
+
+
+  <%# end %> -->
+
+</body>
+</html>

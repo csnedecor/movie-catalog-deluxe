@@ -1,0 +1,28 @@
+.table-container h3{
+  text-align:center;
+}
+.table-container li{
+  display:inline;
+}
+.col{
+  display: inline-block;
+  margin-left:7%;
+  width: 15%;
+}
+.col:first-child{
+  margin-left:0;
+}
+ul.table-items{
+  list-style:none;
+  border-top: 1px solid  black;
+}
+#container{
+  margin-left:10%;
+  margin-right:10%;
+  max-width: 960px;
+}
+.table-container{
+  width:100%;
+  border: 1px solid black;
+  margin-bottom:10px;
+}

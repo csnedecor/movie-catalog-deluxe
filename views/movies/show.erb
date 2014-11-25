@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movies</title>
+  <link rel="stylesheet" href="styles.css" type= "text/css" />
+</head>
+<body>
+  <div id="container">
+    <h1>Movies</h1>
+    <p>Sort by <a href = "/movies?order=year">year</a> or <a href = "/movies?order=rating">rating</a></p>
+      <% @movie_data.each do |movie| %>
+        <div class= "table-container">
+          <h3><a href = "/movies/<%= movie["id"] %>"><%= movie["title"] %></a></h3>
+          <ul class = "table-items">
+            <div class = "col">
+              <li><h4>Year Released:</h4></li>
+            </div>
+            <div class = "col">
+              <li><h4>Rating:</li>
+            </div>
+            <div class = "col">
+              <li><h4>Genre:</h4></li>
+            </div>
+            <div class = "col">
+              <li><h4>Studio:</h4></li>
+            </div>
+          </ul>
+          <ul class = "table-items">
+            <div class = "col">
+              <li><%= movie["year"] %></li>
+            </div>
+            <div class = "col">
+              </li><%= movie["rating"] %></li>
+            </div>
+            <div class = "col">
+              <li><%= movie["genre"] %></li>
+            </div>
+            <div class = "col">
+              <li><%= movie["studio"] %></li>
+            </div>
+          </ul>
+        </div>
+      <% end %>
+  </div>
+</body>
+</html>

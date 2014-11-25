@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Actors</title>
+</head>
+<body>
+  <% @actors.each do |actor| %>
+    <li><a href = "/actors/<%= actor["id"] %>"><%= actor["name"] %></a></li>
+  <% end %>
+  <p>
+    <% if @page > 1 %>
+      <a href = "?page=<%= @back %>">Back</a>
+      <a href = "?page=<%= @next %>">Next</a>
+    <% else %>
+      <a href = "?page=<%= @next %>">Next</a>
+    <% end %>
+  </p>
+</body>
+</html>
